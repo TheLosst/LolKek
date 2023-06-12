@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../Utils/Push.dart';
+import 'ListOfGostinnitsa.dart';
 import 'globals.dart';
 
 class Login extends StatelessWidget {
@@ -74,7 +75,7 @@ class _LoginPageState extends State<LoginPage> {
                 width: 200,
                 height: 60,
                 child: ElevatedButton(
-                    onPressed: () {logUser.login = login.text; logUser.password = password.text;}, child: const Text("Войти"))),
+                    onPressed: () {logUser.login = login.text; logUser.password = password.text; Push().PushTo(ListOfG, context);}, child: const Text("Войти"))),
             const SizedBox(
               height: 30,
             ),
